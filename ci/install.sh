@@ -12,7 +12,7 @@ main() {
            --git japaric/rustfmt-bin \
            --tag v0.6.3-20170107 \
 
-    if [ $TRAVIS_RUST_VERSION = nightly ]; then
+    if [ "$TRAVIS_RUST_VERSION" = "nightly" ]; then
       cargo install clippy || true
     fi
 }
