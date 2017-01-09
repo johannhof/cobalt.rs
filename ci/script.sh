@@ -3,8 +3,11 @@
 set -ex
 
 main() {
-    cargo build
-    cargo test
+    cross build --target $TARGET
+    cross build --target $TARGET --release
+
+    cross test --target $TARGET
+    cross test --target $TARGET --release
 
     if [ $TRAVIS_RUST_VERSION == nightly ]; then
       cargo clippy
