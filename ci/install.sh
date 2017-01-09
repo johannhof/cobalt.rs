@@ -16,7 +16,7 @@ main() {
            --force \
            --git japaric/cross \
            --tag v0.1.4 \
-           --target $TARGET
+           --target $target
 
     # Install rustfmt
     curl -LSfs https://japaric.github.io/trust/install.sh | \
@@ -25,7 +25,7 @@ main() {
            --crate rustfmt \
            --git japaric/rustfmt-bin \
            --tag v0.6.3-20170107 \
-           --target $TARGET
+           --target $target
 
     if [ $TRAVIS_RUST_VERSION == nightly ]; then
       cargo install clippy || true
