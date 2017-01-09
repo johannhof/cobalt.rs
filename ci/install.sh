@@ -20,7 +20,12 @@ main() {
 
     # Install rustfmt
     curl -LSfs https://japaric.github.io/trust/install.sh | \
-        sh -s -- --crate rustfmt --git japaric/rustfmt-bin --tag v0.6.3-20170107 --target $TARGET --to /usr/bin
+        sh -s -- \
+           --crate rustfmt \
+           --git japaric/rustfmt-bin \
+           --tag v0.6.3-20170107 \
+           --target $TARGET \
+           --to ~/.cargo/bin
 
     if [ $TRAVIS_RUST_VERSION == nightly ]; then
       cargo install clippy || true
