@@ -3,13 +3,10 @@
 set -ex
 
 main() {
-    cross build --target $TARGET
-    cross build --target $TARGET --release
+    cargo build
+    cargo test
 
-    cross test --target $TARGET
-    cross test --target $TARGET --release
-
-    if [ $TRAVIS_RUST_VERSION == nightly ]; then
+    if [ $TRAVIS_RUST_VERSION = nightly ]; then
       cargo clippy
     fi
 
