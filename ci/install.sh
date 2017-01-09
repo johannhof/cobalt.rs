@@ -27,7 +27,7 @@ main() {
            --tag v0.6.3-20170107 \
            --target $target
 
-    if [ $TRAVIS_RUST_VERSION == nightly ]; then
+    if [ $TRAVIS_RUST_VERSION = nightly ]; then
       cargo install clippy || true
     fi
 }
