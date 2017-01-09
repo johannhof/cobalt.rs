@@ -166,9 +166,8 @@ impl Document {
             content
         };
 
-        if let Value::Bool(val) =
-            *attributes.entry("is_post".to_owned())
-                .or_insert_with(|| Value::Bool(is_post)) {
+        if let Value::Bool(val) = *attributes.entry("is_post".to_owned())
+            .or_insert_with(|| Value::Bool(is_post)) {
             is_post = val;
         }
 

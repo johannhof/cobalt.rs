@@ -164,7 +164,8 @@ pub fn build(config: &Config) -> Result<()> {
                 ignore_filter(e, source, &config.ignore) &&
                 !template_extensions.contains(&e.path()
                     .extension()
-                    .unwrap_or_else(|| OsStr::new(""))) && !compare_paths(e.path(), dest)
+                    .unwrap_or_else(|| OsStr::new(""))) &&
+                !compare_paths(e.path(), dest)
             })
             .filter_map(|e| e.ok());
 

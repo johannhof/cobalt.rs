@@ -312,7 +312,8 @@ fn main() {
                                 trace!("file changed {:?}", val);
                                 if let Some(path) = val.path {
                                     // get where process was run from
-                                    let cwd = std::env::current_dir().unwrap_or_else(|_| PathBuf::new());
+                                    let cwd = std::env::current_dir()
+                                        .unwrap_or_else(|_| PathBuf::new());
 
                                     // The final goal is to have a relative path. If we already
                                     // have a relative path, we still convert it to an abs path
