@@ -52,7 +52,7 @@ branches:
 
 deploy:
   api_key:
-    secure: IzxVmMO+mVWc4BSoB7Ek7L6Ye5FNrCI4fb/pIFitrQRmP3Cpuw7qMm5sxL5niiGaMRJHwce07ukyKsCNgs+64k8VwToUDPWy4F7+EbIHrjDOJtIY8TME+hUeaCmkMysuqUj1oKtDS+l8F+Yc42ZXNMqz/1kF/h6sGTRSmlzR3mc=
+    secure: Khsa0NRrbTPRBVlwfqmXdGUcoRBpvmAbS2HVSMZ7d74lDmvgSJi6zIklwgIqBsP12h4gEnnk3ffmJQlLR9taziTV8qsEuoLm/ObfAVOQNkY6tWpmTXBA4aRpO95Hc7Oay/ajn7OxtZTaU9uGFxAHnEkU4C2RjsT7busx8hyJ4ZY=
   file_glob: true
   file: $CRATE_NAME-$TRAVIS_TAG-$TARGET.*
   on:
