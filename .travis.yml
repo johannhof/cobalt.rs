@@ -53,7 +53,7 @@ branches:
 deploy:
   provider: releases
   api_key:
-    secure: "qIlN6dreIdeFnWO3d24ynzjmOc0VIwnl63qqQ5RDIBpMuUu0Zp759hpXBcnw4cgdBa6VBMsLigrKXkwak4IZ2pWSA+24eHXaPYk/d0bBA9c5gvKVOvlL0VoAswBt3OyYG3mEEpcMe2jpDH9mhoX+23HKq5qzXQ1rJtHdLebUAsY="
+    secure: cvBmiUswjTLIKa5mehll8+6mEQPL91LfZu6DW97Al7GtFkf9evUTok/Z9C9YiyExNqcHoBpnC91nlHeev6tndd29VueP/HfGaQbCQeETDZ2MzNCPvonWse+LARYuSg+MTyx7vWvIed4zdY7ePdOEbuCiLcZJkjd+/NA+cX/K76Q=
   file_glob: true
   file: $CRATE_NAME-$TRAVIS_TAG-$TARGET.*
   on:
