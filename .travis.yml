@@ -8,7 +8,6 @@ env:
     - CRATE_NAME=cobalt
     # default job
     - TARGET=x86_64-unknown-linux-gnu
-    - secure: "JVsoW6Ru3xFV2Aoqa6xCH/pTDNP4Y+VSF1GikfNN7UyK+hfJAziaaQXbUNG3iuBKYFvQS69thmuydR1+mQaG21NdyedXGbNPCheQpxcgrf7NUdgHVHMfM+yjW5zuiwhpzarLYEc8FKXODvVqW0YZFuEMXEHqSSGrVPjulQVg83A="
 
 matrix:
   fast_finish: true
@@ -52,12 +51,14 @@ branches:
  #- travis-cargo --only stable coveralls --no-sudo --exclude-pattern="src/main.rs,src/new.rs,target/debug/build/"
 
 deploy:
+  provider: releases
+  api_key:
+    secure: "qIlN6dreIdeFnWO3d24ynzjmOc0VIwnl63qqQ5RDIBpMuUu0Zp759hpXBcnw4cgdBa6VBMsLigrKXkwak4IZ2pWSA+24eHXaPYk/d0bBA9c5gvKVOvlL0VoAswBt3OyYG3mEEpcMe2jpDH9mhoX+23HKq5qzXQ1rJtHdLebUAsY="
   file_glob: true
   file: $CRATE_NAME-$TRAVIS_TAG-$TARGET.*
   on:
     condition: $TRAVIS_RUST_VERSION = stable
     tags: true
-  provider: releases
   skip_cleanup: true
 
 #notifications:
